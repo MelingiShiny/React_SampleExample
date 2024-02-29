@@ -1,46 +1,46 @@
 import { Component } from 'react';
 import './App.css';
-import PstList from './HTTP_GET_POST/GetRequest';
-import PostRequest from './HTTP_GET_POST/PostRequest';
-import ComponentA from './ContextAPI/ComponentA';
-import { UserProvider } from './ContextAPI/userContext';
-import ClickCounter2 from './RenderProps/ClickCounter2';
-import HoverCounter2 from './RenderProps/HoverCounter2';
-import Counter from './RenderProps/Counter';
-import KeyPressCounter2 from './RenderProps/KeyPressCounter2';
-import User from './RenderProps/User';
-import ClickCounter from './HigherOrder/ClickCounter';
-import HoverCounter from './HigherOrder/HoverCounter';
-import KeyPressCounter from './HigherOrder/KeyPressCounter';
-import Error1 from './ErrorBoundary/Error1';
-import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
-import Order from './LiftState/Order'
-import ParentComp from './PureComponents/ParentComp';
-import Pure from './PureComponents/PureComp'
-import Updating from './LifecycleMethods/Updating';
-import Fragment from './Fragments/Fragment';
-import Table from './Fragments/Table';
-import EventBind from './EventHandlers/EventBind';
-import ParentComponent from './EventHandlers/ParentComponent';
-import FunctionComponent from './components/FunctionComponent'
-import ClassComponent from './components/ClassComponent';
-import JSx from './Props_States_Jsx/WithJsx';
-import Props from './Props_States_Jsx/Props';
-import State from './Props_States_Jsx/State';
-import SetState from './Props_States_Jsx/SetState';
-import FunctionClick from './EventHandlers/FunctionClick';
-import ClassClick from './EventHandlers/ClassClick';
-import CondtionalRender from './Rendering/CondtionalRender';
-import ListRender from './Rendering/ListRender';
-import Stylesheet from './Styling/Stylesheet';
-import Inline from './Styling/Inline';
-import CSSModules from './Styling/CSSModules';
-import Sampleform from './Forms/Sampleform';
-import Mounting from './LifecycleMethods/Mounting';
-import RefsDemo from './Refs/RefsDemo';
-import FocusInput from './Refs/FocusInput';
-import ForwardRefParent from './Refs/ForwardRefParent';
-import PortalDemo from './PortalDemo';
+import PstList from './Basics/HTTP_GET_POST/GetRequest';
+import PostRequest from './Basics/HTTP_GET_POST/PostRequest';
+import ComponentA from './Basics/ContextAPI/ComponentA';
+import { UserProvider } from './Basics/ContextAPI/userContext';
+import ClickCounter2 from './Basics/RenderProps/ClickCounter2';
+import HoverCounter2 from './Basics/RenderProps/HoverCounter2';
+import Counter from './Basics/RenderProps/Counter';
+import KeyPressCounter2 from './Basics/RenderProps/KeyPressCounter2';
+import User from './Basics/RenderProps/User';
+import ClickCounter from './Basics/HigherOrder/ClickCounter';
+import HoverCounter from './Basics/HigherOrder/HoverCounter';
+import KeyPressCounter from './Basics/HigherOrder/KeyPressCounter';
+import Error1 from './Basics/ErrorBoundary/Error1';
+import ErrorBoundary from './Basics/ErrorBoundary/ErrorBoundary';
+import Order from './Basics/LiftState/Order'
+import ParentComp from './Basics/PureComponents/ParentComp';
+import Updating from './Basics/LifecycleMethods/Updating';
+import Fragment from './Basics/Fragments/Fragment';
+import Table from './Basics/Fragments/Table';
+import EventBind from './Basics/EventHandlers/EventBind';
+import ParentComponent from './Basics/EventHandlers/ParentComponent';
+import FunctionComponent from './Basics/components/FunctionComponent'
+import ClassComponent from './Basics/components/ClassComponent';
+import JSx from './Basics/Props_States_Jsx/WithJsx';
+import Props from './Basics/Props_States_Jsx/Props';
+import State from './Basics/Props_States_Jsx/State';
+import SetState from './Basics/Props_States_Jsx/SetState';
+import FunctionClick from './Basics/EventHandlers/FunctionClick';
+import ClassClick from './Basics/EventHandlers/ClassClick';
+import CondtionalRender from './Basics/Rendering/CondtionalRender';
+import ListRender from './Basics/Rendering/ListRender';
+import Stylesheet from './Basics/Styling/Stylesheet';
+import Inline from './Basics/Styling/Inline';
+import CSSModules from './Basics/Styling/CSSModules';
+import Sampleform from './Basics/Forms/Sampleform';
+import Mounting from './Basics/LifecycleMethods/Mounting';
+import RefsDemo from './Basics/Refs/RefsDemo';
+import FocusInput from './Basics/Refs/FocusInput';
+import ForwardRefParent from './Basics/Refs/ForwardRefParent';
+import PortalDemo from './Basics/PortalDemo';
+import PureComp from './Basics/PureComponents/PureComp';
 
 class App extends Component {
   render() {
@@ -113,6 +113,7 @@ class App extends Component {
         <Order />
         <h1>Pure Component</h1>
         <ParentComp />
+        <PureComp />
         <hr />
         <h1>Fragments</h1>
         <Fragment />
