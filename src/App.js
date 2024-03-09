@@ -1,15 +1,45 @@
 //Routing example in react
 
+import React from 'react';
 import {Routes, Route} from 'react-router-dom'
 import { Home } from './Router/Home';
-import { About } from './Router/About';
+// import About from './Router/About';
+import { Navbar } from './Router/Navbar';
+import { OrderSummary } from './Router/OrderSummary';
+import { NoMatch } from './Router/NoMatch';
+import { NestedRoute } from './Router/NestedRoute';
+import { Featured } from './Router/Featured';
+import { New } from './Router/New';
+import { Users } from './Router/Users';
+import { UserDetails } from './Router/UserDetails';
+import { Admin } from './Router/Admin';
+import { Profile } from './Router/Profile';
+import { AuthProvider } from './Router/auth';
+import { Login } from './Router/Login';
+const LazyAbout = React.lazy(()=>import('./Router/About'))
 
 function App() {
   return (
+    <AuthProvider>
+    <Navbar></Navbar>
     <Routes>
       <Route path='/' element = {<Home/>}></Route>
-      <Route path='about' element = {<About/>}></Route>
+      <Route path='about' element = {<React.Suspense fallback="Loading..."><LazyAbout /></React.Suspense>}></Route>
+      <Route path='order-summary' element = {<OrderSummary></OrderSummary>}></Route>
+      <Route path="products" element={<NestedRoute></NestedRoute>}>
+        <Route index element={<Featured></Featured>}/>
+        <Route path="featured" element={<Featured></Featured>}></Route>
+          <Route path="new" element={<New></New>}></Route>
+      </Route>
+      <Route path="users" element={<Users></Users>}>
+      <Route path=":userId" element={<UserDetails></UserDetails>}></Route>
+      <Route path="admin" element={<Admin></Admin>}></Route>
+      </Route>
+      <Route path="profile" element={<Profile></Profile>}></Route>
+      <Route path="login" element={<Login></Login>}></Route>
+      <Route path="*" element={<NoMatch></NoMatch>}></Route>
       </Routes>
+    </AuthProvider>
   )
 }
 
